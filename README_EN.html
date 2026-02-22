@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messenger PC-Android - Documentation</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 25px;
+        }
+        .feature-box {
+            background: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .success {
+            background: #d5f4e6;
+            border-left-color: #27ae60;
+            color: #27ae60;
+        }
+        .warning {
+            background: #fef9e7;
+            border-left-color: #f39c12;
+            color: #f39c12;
+        }
+        .error {
+            background: #fadbd8;
+            border-left-color: #e74c3c;
+            color: #e74c3c;
+        }
+        .file-list {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .file-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid #dee2e6;
+        }
+        .file-item:last-child {
+            border-bottom: none;
+        }
+        .file-name {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .file-desc {
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+        .step {
+            background: #e8f4fd;
+            border: 1px solid #bee5eb;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+        .step-number {
+            background: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        .command {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        .network-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .network-card {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .network-card h4 {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+        }
+        .network-card p {
+            margin: 0;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📱 Messenger PC-Android</h1>
+        
+        <div class="feature-box success">
+            <strong>🌐 Application can work in local network!</strong><br>
+            Connect Android devices to PC via WiFi for real-time messaging.
+        </div>
+
+        <h2>📁 Project Files</h2>
+        <div class="file-list">
+            <div class="file-item">
+                <div>
+                    <div class="file-name">messenger_server.py</div>
+                    <div class="file-desc">Main server for message exchange</div>
+                </div>
+            </div>
+            <div class="file-item">
+                <div>
+                    <div class="file-name">start_messenger.bat</div>
+                    <div class="file-desc">One-click server launcher</div>
+                </div>
+            </div>
+            <div class="file-item">
+                <div>
+                    <div class="file-name">port_forwarding_setup.py</div>
+                    <div class="file-desc">Automatic Port Forwarding setup for internet</div>
+                </div>
+            </div>
+            <div class="file-item">
+                <div>
+                    <div class="file-name">setup_port_forwarding.bat</div>
+                    <div class="file-desc">Port Forwarding setup launcher</div>
+                </div>
+            </div>
+            <div class="file-item">
+                <div>
+                    <div class="file-name">wifi_checker.py</div>
+                    <div class="file-desc">WiFi Direct support checker</div>
+                </div>
+            </div>
+            <div class="file-item">
+                <div>
+                    <div class="file-name">check_wifi.bat</div>
+                    <div class="file-desc">WiFi Direct checker launcher</div>
+                </div>
+            </div>
+        </div>
+
+        <h2>🚀 Quick Start</h2>
+        
+        <h3>📶 Local Network (Easiest)</h3>
+        <div class="step">
+            <span class="step-number">1</span>
+            Run <code>start_messenger.bat</code>
+        </div>
+        <div class="step">
+            <span class="step-number">2</span>
+            Server will show IP address (e.g., 192.168.1.100)
+        </div>
+        <div class="step">
+            <span class="step-number">3</span>
+            In Android app, enter this IP and port 8888
+        </div>
+        <div class="step">
+            <span class="step-number">4</span>
+            Press Connect - done!
+        </div>
+
+        <h3>🌐 Internet (via Router)</h3>
+        <div class="step">
+            <span class="step-number">1</span>
+            Run <code>setup_port_forwarding.bat</code> as administrator
+        </div>
+        <div class="step">
+            <span class="step-number">2</span>
+            Follow router setup instructions
+        </div>
+        <div class="step">
+            <span class="step-number">3</span>
+            Use external IP to connect from anywhere in the world
+        </div>
+
+        <h2>🔧 Features and Capabilities</h2>
+        
+        <div class="network-info">
+            <div class="network-card">
+                <h4>🏠 Local Network</h4>
+                <p>Work in same WiFi</p>
+            </div>
+            <div class="network-card">
+                <h4>🌐 Internet</h4>
+                <p>Connect from anywhere</p>
+            </div>
+            <div class="network-card">
+                <h4>📶 WiFi Direct</h4>
+                <p>No router or internet</p>
+            </div>
+        </div>
+
+        <h3>messenger_server.py</h3>
+        <div class="feature-box">
+            <strong>Main Server:</strong><br>
+            • Accepts Android connections<br>
+            • Broadcasts messages to all clients<br>
+            • Shows IP address for connection<br>
+            • Works in local network<br>
+            • Supports multiple clients<br>
+            • Logs all connections and messages
+        </div>
+
+        <h3>start_messenger.bat</h3>
+        <div class="feature-box">
+            <strong>Server Launcher:</strong><br>
+            • Launches messenger_server.py<br>
+            • Shows server information<br>
+            • Sets console colors<br>
+            • Simple one-click launch
+        </div>
+
+        <h3>port_forwarding_setup.py</h3>
+        <div class="feature-box">
+            <strong>Internet Setup:</strong><br>
+            • Automatically detects IP addresses<br>
+            • Configures Windows firewall<br>
+            • Tries UPnP and NAT-PMP<br>
+            • Tests Port Forwarding<br>
+            • Provides router instructions
+        </div>
+
+        <h3>setup_port_forwarding.bat</h3>
+        <div class="feature-box">
+            <strong>Setup Launcher:</strong><br>
+            • Launches port_forwarding_setup.py<br>
+            • Checks administrator rights<br>
+            • Shows setup progress
+        </div>
+
+        <h3>wifi_checker.py</h3>
+        <div class="feature-box">
+            <strong>WiFi Checker:</strong><br>
+            • Detects WiFi adapters<br>
+            • Checks WiFi Direct support<br>
+            • Tests network capabilities<br>
+            • Shows available libraries<br>
+            • Provides usage recommendations
+        </div>
+
+        <h3>check_wifi.bat</h3>
+        <div class="feature-box">
+            <strong>Checker Launcher:</strong><br>
+            • Launches wifi_checker.py<br>
+            • Shows check results<br>
+            • User-friendly interface
+        </div>
+
+        <h2>📱 Android Connection</h2>
+        <div class="command">
+IP Address: [IP from server screen]<br>
+Port: 8888
+        </div>
+
+        <h2>🔍 Server Commands</h2>
+        <div class="feature-box">
+            <strong>Available Commands:</strong><br>
+            • <code>status</code> - show server status<br>
+            • <code>clients</code> - list connected clients<br>
+            • <code>clear</code> - clear screen<br>
+            • <code>stop</code> - stop server<br>
+            • <code>help</code> - show help<br>
+            • Any text - send message to all clients
+        </div>
+
+        <h2>⚠️ Important Notes</h2>
+        <div class="feature-box warning">
+            <strong>For Local Network:</strong><br>
+            • Ensure PC and Android are in same WiFi network<br>
+            • Check firewall doesn't block port 8888<br>
+            • Use IP address shown by server
+        </div>
+
+        <div class="feature-box warning">
+            <strong>For Internet:</strong><br>
+            • Requires Port Forwarding setup on router<br>
+            • Run setup as administrator<br>
+            • Use external IP address
+        </div>
+
+        <div class="feature-box error">
+            <strong>If Not Working:</strong><br>
+            • Check IP address in Android app<br>
+            • Ensure server is running<br>
+            • Check internet permissions in Android<br>
+            • Try disabling antivirus/firewall
+        </div>
+
+        <h2>🎯 Operation Modes</h2>
+        
+        <h3>🏠 Local Mode</h3>
+        <div class="step">
+            <span class="step-number">1</span>
+            PC and Android in same WiFi network
+        </div>
+        <div class="step">
+            <span class="step-number">2</span>
+            Run start_messenger.bat
+        </div>
+        <div class="step">
+            <span class="step-number">3</span>
+            Use local IP (192.168.x.x)
+        </div>
+
+        <h3>🌐 Internet Mode</h3>
+        <div class="step">
+            <span class="step-number">1</span>
+            Setup Port Forwarding
+        </div>
+        <div class="step">
+            <span class="step-number">2</span>
+            Use external IP
+        </div>
+        <div class="step">
+            <span class="step-number">3</span>
+            Works from anywhere in the world
+        </div>
+
+        <h3>📶 WiFi Direct Mode</h3>
+        <div class="step">
+            <span class="step-number">1</span>
+            Run check_wifi.bat
+        </div>
+        <div class="step">
+            <span class="step-number">2</span>
+            Check WiFi Direct support
+        </div>
+        <div class="step">
+            <span class="step-number">3</span>
+            Works without router and internet
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 20px; background: #ecf0f1; border-radius: 10px;">
+            <h3 style="color: #2c3e50; margin: 0;">🚀 Ready to Use!</h3>
+            <p style="margin: 10px 0; color: #7f8c8d;">Run start_messenger.bat and start chatting!</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+📱 MESSENGER PC-ANDROID 📱
+=====================================
+
+🌐 APPLICATION CAN WORK IN LOCAL NETWORK!
+
+📁 PROJECT FILES:
+==================
+
+messenger_server.py
+├── Main server for message exchange
+├── Accepts Android connections
+├── Broadcasts messages to all clients
+├── Shows IP address for connection
+├── Works in local network
+├── Supports multiple clients
+└── Logs all connections and messages
+
+start_messenger.bat
+├── One-click server launcher
+├── Launches messenger_server.py
+├── Shows server information
+├── Sets console colors
+└── Simple one-click launch
+
+port_forwarding_setup.py
+├── Automatic Port Forwarding setup for internet
+├── Automatically detects IP addresses
+├── Configures Windows firewall
+├── Tries UPnP and NAT-PMP
+├── Tests Port Forwarding
+└── Provides router instructions
+
+setup_port_forwarding.bat
+├── Port Forwarding setup launcher
+├── Launches port_forwarding_setup.py
+├── Checks administrator rights
+└── Shows setup progress
+
+wifi_checker.py
+├── WiFi Direct support checker
+├── Detects WiFi adapters
+├── Checks WiFi Direct support
+├── Tests network capabilities
+├── Shows available libraries
+└── Provides usage recommendations
+
+check_wifi.bat
+├── WiFi Direct checker launcher
+├── Launches wifi_checker.py
+├── Shows check results
+└── User-friendly interface
+
+🚀 QUICK START:
+==================
+
+📶 LOCAL NETWORK (EASIEST):
+1. Run start_messenger.bat
+2. Server will show IP address (e.g., 192.168.1.100)
+3. In Android app, enter this IP and port 8888
+4. Press Connect - done!
+
+🌐 INTERNET (VIA ROUTER):
+1. Run setup_port_forwarding.bat as administrator
+2. Follow router setup instructions
+3. Use external IP to connect from anywhere in the world
+
+📱 ANDROID CONNECTION:
+========================
+
+IP Address: [IP from server screen]
+Port: 8888
+
+🔍 SERVER COMMANDS:
+======================
+
+status    - show server status
+clients   - list connected clients
+clear     - clear screen
+stop      - stop server
+help      - show help
+Any text   - send message to all clients
+
+🎯 OPERATION MODES:
+====================
+
+🏠 LOCAL MODE:
+1. PC and Android in same WiFi network
+2. Run start_messenger.bat
+3. Use local IP (192.168.x.x)
+
+🌐 INTERNET MODE:
+1. Setup Port Forwarding
+2. Use external IP
+3. Works from anywhere in the world
+
+📶 WIFI DIRECT MODE:
+1. Run check_wifi.bat
+2. Check WiFi Direct support
+3. Works without router and internet
+
+⚠️ IMPORTANT NOTES:
+========================
+
+📶 FOR LOCAL NETWORK:
+• Ensure PC and Android are in same WiFi network
+• Check firewall doesn't block port 8888
+• Use IP address shown by server
+
+🌐 FOR INTERNET:
+• Requires Port Forwarding setup on router
+• Run setup as administrator
+• Use external IP address
+
+❌ IF NOT WORKING:
+• Check IP address in Android app
+• Ensure server is running
+• Check internet permissions in Android
+• Try disabling antivirus/firewall
+
+🌟 READY TO USE!
+=================
+
+Run start_messenger.bat and start chatting!
+
+📞 SUPPORT:
+============
+For additional information open README_RU.html or README_EN.html
+
+🎉 ENJOY MESSAGING! 🎉
